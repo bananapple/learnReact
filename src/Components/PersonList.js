@@ -18,7 +18,6 @@ export class PersonList extends Component {
 
   handleChange = (event) => { //為什麼用 fat arrow 就可以!
   	this.setState({clickValue: event.target.value})
-  	console.log(this.state.value);
   }
 
 	render() {
@@ -53,7 +52,7 @@ export class PersonList extends Component {
 				<div>
 	        <form>
 	          <label>
-	            Sort by
+	            <span className="padding-x-m">Sort by</span>
 	            <select value={clickValue} onChange={this.handleChange}>
 	              <option value="idAscending">1 to 10</option>
 	              <option value="idDescending">10 to 1</option>
@@ -63,7 +62,7 @@ export class PersonList extends Component {
 	          </label>
 	        </form>
       	</div>
-				<ul>
+				<ul className="list-lined padding-x-m">
 					{list.map(person =>
 						<li key={person.id}>
 							<Link to={`/users/${person.id}`}>{person.id}. {person.name}</Link>

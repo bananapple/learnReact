@@ -1,0 +1,20 @@
+@import 'scss/_gap.scss';
+
+.nav{
+  margin-bottom: $gap-m;
+  padding-top: $gap-m;
+  padding-bottom: $gap-m;
+  background-color: $primary-color;
+  a{
+    margin-right: $gap-m;
+    padding: $gap-m;
+    &,
+    &:visited{
+      color: rgba(#fff, .8);
+    }
+    &:hover{
+      color: #fff;
+      background-color: $primary-color;
+    }
+  }
+}

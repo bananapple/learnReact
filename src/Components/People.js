@@ -7,7 +7,7 @@ export class People extends Component {
   render() {
   	const { match } = this.props
   	return (
-  	  <div>
+  	  <div className="padding-x-m">
     		<Route exact path={`${match.url}`} component={PersonList} />
     		<Route path={`${match.url}/:userId`} component={PersonDetail} />
   	  </div>

@@ -1,11 +1,41 @@
  /*autoprefixer grid: on */
 @import 'scss/_colors.scss';
 @import '~nprogress/nprogress';
+@import 'scss/Nav.scss';
 
-.App {
-  text-align: center;
+body{
+  background-color: #fff;
+  color: #999;
 }
-
+a{
+  color: $primary-color;
+  text-decoration: none;
+  &:visited{
+    color: $primary-color;
+  }
+  &:hover{
+    color: $secondary-color;
+  }
+}
+.d-inline-block{
+  display: inline-block;
+}
+.padding-x-m{
+  padding-right: $gap-m;
+  padding-left: $gap-m;
+}
+.padding-x-s{
+  padding-right: $gap-s;
+  padding-left: $gap-s;
+}
+ul.list-lined{
+  li{
+    list-style: none;
+    padding-top: $gap-s;
+    padding-bottom: $gap-s;
+    border-bottom: 1px solid #eee;
+  }
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;

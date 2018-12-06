@@ -15,9 +15,9 @@ export class Sort extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
+        <form>
           <label>
-            Sort by
+            <div className="padding-right">Sort by</div>
             <select value={this.state.value} onChange={this.handleChange}>
               <option value="id">By ID</option>
               <option value="Ascending">A to Z, Ascending</option>
