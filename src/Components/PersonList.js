@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export class PersonList extends Component {
 	state = {
 		personList: [],
-		clickValue: 'idAscending' //❓按 select 會先傳這個，怎麼不是 select 裡面的 value
+		clickValue: 'idAscending'
 	};
 
 	componentDidMount(){

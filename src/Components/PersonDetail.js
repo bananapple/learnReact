@@ -16,15 +16,15 @@ export class PersonDetail extends Component {
     const {personFull} = this.state
 		return(
       <div>
-			<div>
-        email: {personFull.email}
-      </div>
-      <div>
-        name: {personFull.name}
-      </div>
-      <div>
-        phone: {personFull.phone}
-			</div>
+  			<div>
+          email: {personFull.email}
+        </div>
+        <div>
+          name: {personFull.name}
+        </div>
+        <div>
+          phone: {personFull.phone}
+  			</div>
       </div>
 		)
 	}

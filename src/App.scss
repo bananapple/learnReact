@@ -64,6 +64,9 @@ ul.list-lined{
     transform: rotate(360deg);
   }
 }
+h1,h6{
+  margin-top: 0;
+}
 .Test{
   background-image: url(./logo.svg);
 }
@@ -72,4 +75,16 @@ ul.list-lined{
 }
 .text-blue{
   color: blue;
+}
+.post{
+  margin-bottom: $gap-m;
+  padding: $gap-m;
+  border: 1px solid rgba($primary-color, .2);
+  border-radius: 10px;
+  color: $grey;
+}
+.comment{
+  margin-bottom: $gap-m;
+  padding: $gap-s;
+  background-color: rgba($primary-color, .05);
 }

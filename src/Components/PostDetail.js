@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export class UserDetail extends Component {
   state ={
-    userPostList: []
+    userPostList: [],
   }
+
 
   componentDidMount(){
     const { match } = this.props
@@ -26,17 +28,19 @@ export class UserDetail extends Component {
   }
 
   render() {
-    const { userPostList } = this.state
+    const { userPostList, countComment } = this.state
+    const { match } = this.props
     return (
       <div className="padding-x-m">
         <h1>post...</h1>
-
         {userPostList.map(post =>
-          <div>
-            {post.id}
+          <div className="post">
+            <h6>#{post.id}</h6>
+            <h1>{post.title}</h1>
+            <div>{post.body}</div>
+            <Link to={`/users/${match.params.userId}/posts/${post.id}/comments`}>Comments</Link>
           </div>
         )}
-
       </div>
     );
   }
