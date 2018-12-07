@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import axios from 'axios';
+import { withRouter } from 'react-router-dom';
 
 export class PostList extends Component {
   state = {
@@ -14,13 +15,13 @@ export class PostList extends Component {
     })
   }
   handleChange = (event) => {
+    const { value } = event.target
     this.setState({clickValue: event.target.value})
-    console.log(this);
+    this.props.history.push(`/post/${value}`)
   }
 
   render() {
     const {personList} = this.state
-    console.log(this.props)
     return (
       <div>
         <select value={this.state.value} onChange={this.handleChange}>
@@ -34,4 +35,4 @@ export class PostList extends Component {
     );
   }
 }
-export default PostList;
+export default withRouter(PostList);

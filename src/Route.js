@@ -4,7 +4,6 @@ import Navigation from './Components/Navigation';
 import Home from './Components/Home';
 import People from './Components/People';
 import About from './Components/About';
-
 import PostList from './Components/PostList';
 import PostDetail from './Components/PostDetail';
 
@@ -14,6 +13,7 @@ export class Url extends Component {
     return (
       <BrowserRouter>
         <div>
+        <Navigation/>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
