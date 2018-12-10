@@ -11,7 +11,7 @@ export class Navigation extends Component {
 			<div className="nav">
 				<NavLink to="/">Home</NavLink>
 				<NavLink to="/about">About</NavLink>
-				<NavLink to="/users">PersonList</NavLink>
+				<NavLink to="/person">PersonList</NavLink>
         <div className="d-inline-block">
           <PostList />
         </div>

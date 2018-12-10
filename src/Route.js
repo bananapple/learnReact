@@ -6,6 +6,7 @@ import People from './Components/People';
 import About from './Components/About';
 import PostDetail from './Components/PostDetail';
 import Comment from './Components/Comment';
+import PostCreate from './Components/PostCreate';
 
 export class Url extends Component {
   render() {
@@ -17,9 +18,10 @@ export class Url extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
-            <Route path="/users" component={People} />
+            <Route path="/person" component={People} />
             <Route path='/post/:userId' component={PostDetail} />
-            <Route path='/users/:userId/posts/:postId/comments' component={Comment}/>
+            <Route path='/posts/:postId/comments' component={Comment}/>
+            <Route path='/create_post' component={PostCreate}/>
           </Switch>
         </div>
       </BrowserRouter>

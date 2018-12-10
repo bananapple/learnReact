@@ -22,7 +22,7 @@ export class UserDetail extends Component {
   }
 
   fetchPostData = (userId) => {
-    axios.get(`https://jsonplaceholder.typicode.com/posts?userId=`+ userId).then( res => {
+    axios.get(`http://localhost:3000/post?userId=`+ userId).then( res => {
       this.setState({userPostList: res.data});
     });
   }
@@ -33,12 +33,15 @@ export class UserDetail extends Component {
     return (
       <div className="padding-x-m">
         <h1>post...</h1>
+        <div className="create-new-post">
+          <Link to={`/create_post`}><span role="img">✏️ </span>New Post</Link>
+        </div>
         {userPostList.map(post =>
           <div className="post">
             <h6>#{post.id}</h6>
             <h1>{post.title}</h1>
             <div>{post.body}</div>
-            <Link to={`/users/${match.params.userId}/posts/${post.id}/comments`}>Comments</Link>
+            <Link to={`/posts/${post.id}/comments`}>Comments</Link>
           </div>
         )}
       </div>

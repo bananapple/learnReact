@@ -9,7 +9,7 @@ export class PersonList extends Component {
 	};
 
 	componentDidMount(){
-		axios.get(`https://jsonplaceholder.typicode.com/users`).then( res => {
+		axios.get(`http://localhost:3000/person/`).then( res => {
 			this.setState({personList: res.data});
 		})
 	}
@@ -65,7 +65,7 @@ export class PersonList extends Component {
 				<ul className="list-lined padding-x-m">
 					{list.map(person =>
 						<li key={person.id}>
-							<Link to={`/users/${person.id}`}>{person.id}. {person.name}</Link>
+							<Link to={`/person/${person.id}`}>{person.id}. {person.name}</Link>
 						</li>
 					)}
 				</ul>

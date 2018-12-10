@@ -88,3 +88,29 @@ h1,h6{
   padding: $gap-s;
   background-color: rgba($primary-color, .05);
 }
+.create-new-post{
+  font-size: 2rem;
+  position: fixed;
+  right: 10px;
+  top: 80px;
+}
+button{
+  background-color: blue;
+  color: yellow;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  margin-top: 6px;
+  padding: 6px 12px;
+  &:hover{
+    background-color: darken(blue, 10);
+  }
+}
+input,
+textarea{
+  padding: 6px 12px;
+  margin-top: 2px;
+  margin-bottom: 6px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}

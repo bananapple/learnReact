@@ -8,7 +8,7 @@ export class PersonDetail extends Component {
 
   componentDidMount(){
     const { match } = this.props
-    axios.get(`https://jsonplaceholder.typicode.com/users/` + match.params.userId).then( res => {
+    axios.get(`http://localhost:3000/person/` + match.params.userId).then( res => {
       this.setState({personFull: res.data});
     })
   }

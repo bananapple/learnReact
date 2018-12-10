@@ -9,7 +9,7 @@ export class People extends Component {
   	return (
   	  <div className="padding-x-m">
     		<Route exact path={`${match.url}`} component={PersonList} />
-    		<Route path={`${match.url}/:userId`} component={PersonDetail} />
+    		<Route path={`${match.url}/:id`} component={PersonDetail} />
   	  </div>
   	);
   }
