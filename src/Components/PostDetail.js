@@ -7,7 +7,6 @@ export class UserDetail extends Component {
     userPostList: [],
   }
 
-
   componentDidMount(){
     const { match } = this.props
     this.fetchPostData(match.params.userId)
