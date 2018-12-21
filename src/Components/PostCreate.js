@@ -5,27 +5,24 @@ export class PostCreate extends Component {
   constructor() {
     super();
     this.state = {
-      textarea: ''
+      title: '',
+      body: ''
     }
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(event) {
     event.preventDefault();
-    const { textarea, input } = this.state
+    const { title, body } = this.state
     axios.post('http://localhost:3000/post/', {
-      title: input,
-      body: textarea,
+      title,
+      body,
       userId: 3
     });
   }
 
   handleChange = (event) => {
-    this.setState({ textarea: event.target.value })
-  }
-
-  handleChangeTitle = (event) => {
-    this.setState({ input: event.target.value })
+    this.setState({ [event.target.name]: event.target.value })
   }
 
   render() {
@@ -37,7 +34,7 @@ export class PostCreate extends Component {
             <label htmlFor="title">title</label>
           </div>
           <div>
-            <input id="title" name="title" type="text" onChange={this.handleChangeTitle}/>
+            <input id="title" name="title" type="text" onChange={this.handleChange}/>
           </div>
           <div>
             <label htmlFor="body">say something</label>
